@@ -9,7 +9,13 @@ import android.util.Log;
 
 import java.util.List;
 
+<<<<<<< HEAD
 
+=======
+/**
+ * Created by mark on 5/7/15.
+ */
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 public class DataBaseHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
 
@@ -20,7 +26,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             Contract.PhotoEntry.HUMIDITY,
             Contract.PhotoEntry.DEGREE,
             Contract.PhotoEntry.MAIN,
+<<<<<<< HEAD
 			Contract.PhotoEntry.DESCRIPTION,};
+=======
+			Contract.PhotoEntry.DESCRIPTION};
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 
 /*
     private String[] projection = {
@@ -49,7 +59,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 					Contract.PhotoEntry.DEGREE + " TEXT NOT NULL, " +
 					Contract.PhotoEntry.MAIN + " TEXT NOT NULL, " +
 					Contract.PhotoEntry.DESCRIPTION + " INTEGER NOT NULL " + ")";
+<<<<<<< HEAD
 
+=======
+					
+					
+					
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 					
 					
 					
@@ -72,7 +88,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+<<<<<<< HEAD
         Log.i(Constants.TAG,DATABASE_CREATE);
+=======
+        Log.i(Constants.TAG, "Create table command: " + DATABASE_CREATE);
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
         db.execSQL(DATABASE_CREATE);
     }
 
@@ -92,9 +112,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		cv.put(Contract.PhotoEntry.DEGREE, info.getDegree());
 		cv.put(Contract.PhotoEntry.MAIN, info.getMain());
 		cv.put(Contract.PhotoEntry.DESCRIPTION, info.getDescription());
+<<<<<<< HEAD
         Log.i(Constants.TAG, "TableID: " + Contract.PhotoEntry._ID);
 //        Log.i(Constants.TAG, "DatabaseHelperMain: " + info.getMain());
         db.insert(Contract.PhotoEntry.TABLE_NAME, null, cv);
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 /*
 					Contract.PhotoEntry._ID + " INTEGER PRIMARY KEY, " +
 					Contract.PhotoEntry.CITY + " TEXT NOT NULL, " +
@@ -114,11 +137,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cv.put(Contract.PhotoEntry.PUBLIC, info.getIsPublic() ? 1 : 0);
         cv.put(Contract.PhotoEntry.FRIEND, info.getIsFriend() ? 1 : 0);
 */
+<<<<<<< HEAD
+=======
+        db.insert(Contract.PhotoEntry.TABLE_NAME, null, cv);
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
     }
 
     public Cursor getAllRows() {
         SQLiteDatabase db = getReadableDatabase();
+<<<<<<< HEAD
         Log.i(Constants.TAG, "Made it to the getAllRows Category");
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
         return db.query(Contract.PhotoEntry.TABLE_NAME, projection, null, null, null, null, null);
 
 //        Here's the method with arguments:

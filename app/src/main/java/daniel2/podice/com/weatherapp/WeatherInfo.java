@@ -8,6 +8,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+/**
+ * Created by mark on 4/30/15.
+	Takes FlickerPhoto
+ */
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 public class WeatherInfo {
     private String dt, humidity, degree, id, main, description;
 	private static String cityName, countryName;
@@ -20,7 +27,10 @@ public class WeatherInfo {
 
 
 		this.degree = (String) jsonEntry.optString("degree");
+<<<<<<< HEAD
         Log.i(Constants.TAG, "Humidity: " + humidity);
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 
 //        String weather = (String) jsonEntry.optString("weather");
 
@@ -29,6 +39,10 @@ public class WeatherInfo {
         this.main = m.getString("main");
         this.description = m.getString("description");
 
+<<<<<<< HEAD
+=======
+        Log.i(Constants.TAG, "Description" + description);
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 		
 //		this.id = (String) weather.optString("id");
 

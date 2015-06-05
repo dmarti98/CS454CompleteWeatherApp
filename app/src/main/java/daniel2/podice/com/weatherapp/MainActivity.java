@@ -39,8 +39,11 @@ public class MainActivity extends ActionBarActivity {
     private ProgressBar progress;
     private double latitude;
     private double longitude;
+<<<<<<< HEAD
     private String cityName, countryName;
     private TextView cityView, countryView;
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
     LocationManager locationManager;
     LocationListener locationListener;
 
@@ -50,10 +53,13 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progress = (ProgressBar) findViewById(R.id.progressBar);
+<<<<<<< HEAD
         cityView = (TextView)findViewById(R.id.city);
         countryView = (TextView)findViewById(R.id.country);
 //        cityView = (TextView)findViewById(R.id.city);
 //        countryView = (TextView)findViewById(R.id.country);
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
         getLocation();
 //        refresh = (Button)findViewById(R.id.refresh);
     }
@@ -79,7 +85,11 @@ public class MainActivity extends ActionBarActivity {
             public void onLocationChanged(Location location) {
                 latitude = location.getLatitude();
                 longitude = location.getLongitude();
+<<<<<<< HEAD
 //                Toast.makeText(MainActivity.this, "latitude: " + latitude + "longitude: " + longitude, Toast.LENGTH_LONG).show();
+=======
+                Toast.makeText(MainActivity.this, "latitude: " + latitude + "longitude: " + longitude, Toast.LENGTH_LONG).show();
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
                 startLoadTask(MainActivity.this);
             }
 
@@ -118,8 +128,11 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void showList() {
+<<<<<<< HEAD
         cityView.setText("City: " + cityName);
         countryView.setText("Country: " + countryName);
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.container, new WeatherFragment());
@@ -161,10 +174,24 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         protected Long doInBackground(String... strings) {
+<<<<<<< HEAD
 
             String dataString = "http://api.openweathermap.org/data/2.5/forecast/daily?lat="+ latitude + "&lon=" + longitude + "&cnt=10&mode=json";
 
 
+=======
+//            String dataString = "https://api.flickr.com/services/rest/" +
+//                    "?method=flickr.photos.search&api_key="+Constants.API_KEY+"&min_upload_date=04%2F25%2F2015&lat="+latitude+"&lon=" +
+//                    longitude+"&radius="+Constants.RADIUS+"&radius_units=km&format=json&nojsoncallback=1
+
+            String dataString = "http://api.openweathermap.org/data/2.5/forecast/daily?lat="+ latitude + "&lon=" + longitude + "&cnt=10&mode=json";
+
+//            String dataString = "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api+key=" +
+//                   Constants.API_KEY + "&per_page=" + Constants.NUM_PHOTOS + "&format=json&nojsoncallback=1";
+
+//"api.openweathermap.org/data/2.5/forecast/daily?lat="+ longitude +
+//				"&lon=" + latitude + "&cnt=10&mode=json";
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
             Log.i(Constants.TAG, dataString);
             try {
                 URL dataUrl = new URL(dataString);
@@ -185,6 +212,7 @@ public class MainActivity extends ActionBarActivity {
                     String weatherData = sb.toString();
 
                     photos = WeatherInfo.makeWeatherList(weatherData);
+<<<<<<< HEAD
 
 
                     cityName = photos.get(0).getCityName();
@@ -193,6 +221,9 @@ public class MainActivity extends ActionBarActivity {
 
 
 //                    Log.d(Constants.TAG, weatherData);
+=======
+                    Log.d(Constants.TAG, weatherData);
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 
                     return 0l;
                 } else {

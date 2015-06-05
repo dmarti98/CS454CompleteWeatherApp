@@ -2,6 +2,7 @@ package daniel2.podice.com.weatherapp;
 
 import android.content.Context;
 import android.database.Cursor;
+<<<<<<< HEAD
 import android.graphics.drawable.Drawable;
 import android.support.v4.widget.CursorAdapter;
 import android.util.Log;
@@ -11,11 +12,26 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+=======
+import android.support.v4.widget.CursorAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+/**
+ * Created by mark on 5/7/15.
+ FlickerPhotoAdapter
+ */
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 public class WeatherInfoAdapter extends CursorAdapter {
 
     public WeatherInfoAdapter(Context c, Cursor cursor){
         super(c, cursor, 0);
+<<<<<<< HEAD
         Log.i(Constants.TAG, "Needs super constructor complete");
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
     }
 
     @Override
@@ -26,6 +42,7 @@ public class WeatherInfoAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         TextView title = (TextView) view.findViewById(R.id.title_text);
+<<<<<<< HEAD
         TextView titleDegreeField = (TextView) view.findViewById(R.id.title_degree);
         FrameLayout image = (FrameLayout) view.findViewById(R.id.title_image);
 
@@ -58,6 +75,8 @@ public class WeatherInfoAdapter extends CursorAdapter {
         titleDegreeField.setText(titleDegree + " ");
         Log.i(Constants.TAG, "Main Degree*************************: " + titleDegree);
 
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
         String titleText = cursor.getString(cursor.getColumnIndexOrThrow(Contract.PhotoEntry.DESCRIPTION));
         title.setText(titleText);
     }

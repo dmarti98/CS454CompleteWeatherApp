@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+<<<<<<< HEAD
 import android.util.Log;
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +21,14 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 
+=======
+/**
+ * Created by mark on 4/29/15.
+ FlickerFragment
+ */
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 public class WeatherFragment extends Fragment implements AdapterView.OnItemClickListener{
     Cursor cursor;
     ListView lv;
@@ -31,7 +41,10 @@ public class WeatherFragment extends Fragment implements AdapterView.OnItemClick
 
         DataBaseHelper dbHelper = new DataBaseHelper(getActivity());
         cursor = dbHelper.getAllRows();
+<<<<<<< HEAD
         Log.i(Constants.TAG, "Cursor transaction complete");
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 
         //will change this later when we use a CursorLoader
         getActivity().startManagingCursor(cursor);

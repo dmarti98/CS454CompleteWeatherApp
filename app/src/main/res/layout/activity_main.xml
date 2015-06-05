@@ -6,6 +6,7 @@
     android:weightSum="1.0"
     android:orientation="vertical">
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/city"
         android:text="City: "
@@ -18,6 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+=======
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleLarge"

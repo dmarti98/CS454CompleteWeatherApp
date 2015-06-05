@@ -1,6 +1,12 @@
 package daniel2.podice.com.weatherapp;
 
+<<<<<<< HEAD
 
+=======
+/**
+ * Created by mark on 4/29/15.
+ */
+>>>>>>> c483c87b204f3c326e8098fe11414d1712ff672d
 public class Constants {
     public static final int NUM_PHOTOS = 10;
     public static final String TAG = "my code";
